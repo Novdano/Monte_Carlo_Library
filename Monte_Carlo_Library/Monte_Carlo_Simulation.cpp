@@ -68,7 +68,7 @@ double Monte_Carlo_Simulation::run_simulations(int run_type) {
 			}
 			total_payoff = total_payoff+ payoff_function(S);
 		}
-		return (total_payoff / M) * pow((1 + r * (T / N)), -N);
+		return (total_payoff / M) * pow((1 + r * (T / N)), N);
 	}
 	else if (run_type == PARALLEL_RUN) {
 		double *result = (double*) malloc(sizeof(double));
